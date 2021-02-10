@@ -142,9 +142,11 @@ figure {
 }
 
 .fh5co-projects-feed .fh5co-project {
-  float: left;
-  margin: 20px 20px 20px;
-  width: 290px;
+  /* float: left; */
+  margin: 53px;
+  display: inline-block;
+  vertical-align: top;
+  width: 200px;
 }
 @media screen and (max-width: 480px) {
   .fh5co-projects-feed .fh5co-project {
@@ -157,7 +159,7 @@ figure {
 }
 .fh5co-projects-feed .fh5co-project > a img {
   margin-bottom: 30px;
-  max-height: 250px;
+  max-height: 200px;
 }
 .fh5co-projects-feed .fh5co-project > a h2 {
   font-size: 20px;
