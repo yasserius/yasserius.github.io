@@ -30,7 +30,7 @@ CONFIG = {
         'PostgreSQL', 'Docker', 'AWS', 'Next.js'
     ],
     
-    'css_variables': '''
+    'css_variables': """
         :root {
             --vscode-bg: #1e1e1e;
             --vscode-sidebar: #252526;
@@ -43,7 +43,7 @@ CONFIG = {
             --vscode-text: #d4d4d4;
             --vscode-text-muted: #969696;
         }
-    ''',
+    """,
     
     'styling': {
         'body': {
@@ -267,247 +267,195 @@ class BlogGenerator:
         self.env = Environment(loader=FileSystemLoader('.'))
         
     def _generate_css(self) -> str:
-        """Generate CSS from configuration"""
+        """Generate CSS from configuration using f-strings"""
         styles = CONFIG['styling']
         
-        css = '''
-        body {
-            font-family: '%(font_family)s', sans-serif;
-            background: %(background)s;
-            color: %(color)s;
-            line-height: %(line_height)s;
-        }
+        css = f"""
+        body {{
+            font-family: '{styles['body']['font_family']}', sans-serif;
+            background: {styles['body']['background']};
+            color: {styles['body']['color']};
+            line-height: {styles['body']['line_height']};
+        }}
         
-        .font-mono {
+        .font-mono {{
             font-family: 'JetBrains Mono', monospace;
-        }
+        }}
         
-        .gradient-text {
+        .gradient-text {{
             background: linear-gradient(135deg, var(--vscode-light-blue), var(--vscode-green));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-        }
+        }}
         
-        .code-window {
+        .code-window {{
             background: var(--vscode-editor);
             border: 1px solid #3c3c3c;
             border-radius: 8px;
             overflow: hidden;
-        }
+        }}
         
-        .code-header {
+        .code-header {{
             background: var(--vscode-sidebar);
             padding: 12px 16px;
             border-bottom: 1px solid #3c3c3c;
             display: flex;
             align-items: center;
             gap: 8px;
-        }
+        }}
         
-        .code-dot {
+        .code-dot {{
             width: 12px;
             height: 12px;
             border-radius: 50%;
-        }
+        }}
         
-        .blog-card {
+        .blog-card {{
             background: var(--vscode-sidebar);
             border: 1px solid #3c3c3c;
             transition: all 0.3s ease;
-        }
+        }}
         
-        .blog-card:hover {
+        .blog-card:hover {{
             border-color: var(--vscode-blue);
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 122, 204, 0.15);
-        }
+        }}
         
-        .skill-tag {
+        .skill-tag {{
             background: rgba(79, 193, 255, 0.1);
             border: 1px solid rgba(79, 193, 255, 0.3);
             color: var(--vscode-light-blue);
-        }
+        }}
         
-        .typing-animation {
+        .typing-animation {{
             border-right: 2px solid var(--vscode-light-blue);
             animation: blink 1s infinite;
-        }
+        }}
         
-        @keyframes blink {
-            0%%, 50%% { border-color: var(--vscode-light-blue); }
-            51%%, 100%% { border-color: transparent; }
-        }
+        @keyframes blink {{
+            0%, 50% {{ border-color: var(--vscode-light-blue); }}
+            51%, 100% {{ border-color: transparent; }}
+        }}
         
-        .glow-effect {
+        .glow-effect {{
             box-shadow: 0 0 20px rgba(79, 193, 255, 0.3);
-        }
+        }}
         
-        .blog-content h1 {
-            color: %(h1_color)s;
-            font-size: %(h1_font_size)s;
-            font-weight: %(h1_font_weight)s;
-            margin: %(h1_margin)s;
-            border-bottom: %(h1_border_bottom)s;
-            padding-bottom: %(h1_padding_bottom)s;
-        }
+        .blog-content h1 {{
+            color: {styles['h1']['color']};
+            font-size: {styles['h1']['font_size']};
+            font-weight: {styles['h1']['font_weight']};
+            margin: {styles['h1']['margin']};
+            border-bottom: {styles['h1']['border_bottom']};
+            padding-bottom: {styles['h1']['padding_bottom']};
+        }}
         
-        .blog-content h2 {
-            color: %(h2_color)s;
-            font-size: %(h2_font_size)s;
-            font-weight: %(h2_font_weight)s;
-            margin: %(h2_margin)s;
-            border-bottom: %(h2_border_bottom)s;
-            padding-bottom: %(h2_padding_bottom)s;
-        }
+        .blog-content h2 {{
+            color: {styles['h2']['color']};
+            font-size: {styles['h2']['font_size']};
+            font-weight: {styles['h2']['font_weight']};
+            margin: {styles['h2']['margin']};
+            border-bottom: {styles['h2']['border_bottom']};
+            padding-bottom: {styles['h2']['padding_bottom']};
+        }}
         
-        .blog-content h3 {
-            color: %(h3_color)s;
-            font-size: %(h3_font_size)s;
-            font-weight: %(h3_font_weight)s;
-            margin: %(h3_margin)s;
-        }
+        .blog-content h3 {{
+            color: {styles['h3']['color']};
+            font-size: {styles['h3']['font_size']};
+            font-weight: {styles['h3']['font_weight']};
+            margin: {styles['h3']['margin']};
+        }}
         
-        .blog-content p {
-            margin: %(paragraph_margin)s;
-            color: %(paragraph_color)s;
-        }
+        .blog-content p {{
+            margin: {styles['paragraph']['margin']};
+            color: {styles['paragraph']['color']};
+        }}
         
-        .blog-content pre {
-            background: %(code_block_background)s;
-            border: %(code_block_border)s;
-            border-radius: %(code_block_border_radius)s;
-            padding: %(code_block_padding)s;
-            margin: %(code_block_margin)s;
-            overflow-x: %(code_block_overflow_x)s;
-        }
+        .blog-content pre {{
+            background: {styles['code_block']['background']};
+            border: {styles['code_block']['border']};
+            border-radius: {styles['code_block']['border_radius']};
+            padding: {styles['code_block']['padding']};
+            margin: {styles['code_block']['margin']};
+            overflow-x: {styles['code_block']['overflow_x']};
+        }}
         
-        .blog-content code {
+        .blog-content code {{
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.875rem;
-        }
+        }}
         
-        .blog-content p code {
-            background: %(inline_code_background)s;
-            color: %(inline_code_color)s;
-            padding: %(inline_code_padding)s;
-            border-radius: %(inline_code_border_radius)s;
-            font-size: %(inline_code_font_size)s;
-        }
+        .blog-content p code {{
+            background: {styles['inline_code']['background']};
+            color: {styles['inline_code']['color']};
+            padding: {styles['inline_code']['padding']};
+            border-radius: {styles['inline_code']['border_radius']};
+            font-size: {styles['inline_code']['font_size']};
+        }}
         
-        .blog-content table {
-            width: %(table_width)s;
-            border-collapse: %(table_border_collapse)s;
-            margin: %(table_margin)s;
-            background: %(table_background)s;
-            border-radius: %(table_border_radius)s;
-            overflow: %(table_overflow)s;
-        }
+        .blog-content table {{
+            width: {styles['table']['width']};
+            border-collapse: {styles['table']['border_collapse']};
+            margin: {styles['table']['margin']};
+            background: {styles['table']['background']};
+            border-radius: {styles['table']['border_radius']};
+            overflow: {styles['table']['overflow']};
+        }}
         
-        .blog-content th {
-            background: %(table_header_background)s;
-            color: %(table_header_color)s;
-            font-weight: %(table_header_font_weight)s;
-            padding: %(table_header_padding)s;
-            text-align: %(table_header_text_align)s;
-            border-bottom: %(table_header_border_bottom)s;
-        }
+        .blog-content th {{
+            background: {styles['table_header']['background']};
+            color: {styles['table_header']['color']};
+            font-weight: {styles['table_header']['font_weight']};
+            padding: {styles['table_header']['padding']};
+            text-align: {styles['table_header']['text_align']};
+            border-bottom: {styles['table_header']['border_bottom']};
+        }}
         
-        .blog-content td {
-            padding: %(table_cell_padding)s;
-            text-align: %(table_cell_text_align)s;
-            border-bottom: %(table_cell_border_bottom)s;
-        }
+        .blog-content td {{
+            padding: {styles['table_cell']['padding']};
+            text-align: {styles['table_cell']['text_align']};
+            border-bottom: {styles['table_cell']['border_bottom']};
+        }}
         
-        .blog-content a {
-            color: %(link_color)s;
-            text-decoration: %(link_text_decoration)s;
-        }
+        .blog-content a {{
+            color: {styles['link']['color']};
+            text-decoration: {styles['link']['text_decoration']};
+        }}
         
-        .blog-content a:hover {
+        .blog-content a:hover {{
             text-decoration: underline;
-        }
+        }}
         
-        .blog-content img {
-            max-width: %(image_max_width)s;
-            height: %(image_height)s;
-            border-radius: %(image_border_radius)s;
-            margin: %(image_margin)s;
-        }
+        .blog-content img {{
+            max-width: {styles['image']['max_width']};
+            height: {styles['image']['height']};
+            border-radius: {styles['image']['border_radius']};
+            margin: {styles['image']['margin']};
+        }}
         
-        .related-posts {
+        .related-posts {{
             background: var(--vscode-sidebar);
             border: 1px solid #3c3c3c;
             border-radius: 8px;
             padding: 1.5rem;
             margin: 2rem 0;
-        }
+        }}
         
-        .post-card {
+        .post-card {{
             background: var(--vscode-editor);
             border: 1px solid #3c3c3c;
             border-radius: 8px;
             padding: 1rem;
             transition: all 0.3s ease;
-        }
+        }}
         
-        .post-card:hover {
+        .post-card:hover {{
             border-color: var(--vscode-blue);
             transform: translateY(-2px);
-        }
-        ''' % {
-            **styles['body'],
-            'h1_color': styles['h1']['color'],
-            'h1_font_size': styles['h1']['font_size'],
-            'h1_font_weight': styles['h1']['font_weight'],
-            'h1_margin': styles['h1']['margin'],
-            'h1_border_bottom': styles['h1']['border_bottom'],
-            'h1_padding_bottom': styles['h1']['padding_bottom'],
-            'h2_color': styles['h2']['color'],
-            'h2_font_size': styles['h2']['font_size'],
-            'h2_font_weight': styles['h2']['font_weight'],
-            'h2_margin': styles['h2']['margin'],
-            'h2_border_bottom': styles['h2']['border_bottom'],
-            'h2_padding_bottom': styles['h2']['padding_bottom'],
-            'h3_color': styles['h3']['color'],
-            'h3_font_size': styles['h3']['font_size'],
-            'h3_font_weight': styles['h3']['font_weight'],
-            'h3_margin': styles['h3']['margin'],
-            'paragraph_margin': styles['paragraph']['margin'],
-            'paragraph_color': styles['paragraph']['color'],
-            'code_block_background': styles['code_block']['background'],
-            'code_block_border': styles['code_block']['border'],
-            'code_block_border_radius': styles['code_block']['border_radius'],
-            'code_block_padding': styles['code_block']['padding'],
-            'code_block_margin': styles['code_block']['margin'],
-            'code_block_overflow_x': styles['code_block']['overflow_x'],
-            'inline_code_background': styles['inline_code']['background'],
-            'inline_code_color': styles['inline_code']['color'],
-            'inline_code_padding': styles['inline_code']['padding'],
-            'inline_code_border_radius': styles['inline_code']['border_radius'],
-            'inline_code_font_size': styles['inline_code']['font_size'],
-            'table_width': styles['table']['width'],
-            'table_border_collapse': styles['table']['border_collapse'],
-            'table_margin': styles['table']['margin'],
-            'table_background': styles['table']['background'],
-            'table_border_radius': styles['table']['border_radius'],
-            'table_overflow': styles['table']['overflow'],
-            'table_header_background': styles['table_header']['background'],
-            'table_header_color': styles['table_header']['color'],
-            'table_header_font_weight': styles['table_header']['font_weight'],
-            'table_header_padding': styles['table_header']['padding'],
-            'table_header_text_align': styles['table_header']['text_align'],
-            'table_header_border_bottom': styles['table_header']['border_bottom'],
-            'table_cell_padding': styles['table_cell']['padding'],
-            'table_cell_text_align': styles['table_cell']['text_align'],
-            'table_cell_border_bottom': styles['table_cell']['border_bottom'],
-            'link_color': styles['link']['color'],
-            'link_text_decoration': styles['link']['text_decoration'],
-            'image_max_width': styles['image']['max_width'],
-            'image_height': styles['image']['height'],
-            'image_border_radius': styles['image']['border_radius'],
-            'image_margin': styles['image']['margin']
-        }
+        }}
+        """
         
         return css
     
