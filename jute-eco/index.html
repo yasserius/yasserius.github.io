@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoJute - Jute, Reinvented</title>
+    <!-- Tailwind CSS via CDN for standalone usage -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        ::selection {
+            background-color: #7c8c6c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="text-[#f0eee4] bg-[#4a5844] min-h-screen">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 p-6 flex justify-between items-center z-50 mix-blend-difference">
+        <div
+            class="flex items-center gap-2 text-[10px] tracking-widest uppercase cursor-pointer hover:opacity-70 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18" />
+                <path d="m6 6 12 12" />
+            </svg>
+            MENU
+        </div>
+        <div class="font-medium text-xl tracking-tighter">EcoJute</div>
+        <div class="text-[10px] tracking-widest uppercase cursor-pointer hover:opacity-70 transition-opacity">CONTACT US
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex flex-col justify-between p-6 pt-32 lg:p-12 lg:pt-40 overflow-hidden">
+        <div class="absolute inset-0 z-0 flex items-center justify-center opacity-40 mix-blend-luminosity">
+            <img src="images/four-bags.png" alt="Jute Bags"
+                class="w-full h-full object-cover object-center scale-105" />
+            <div class="absolute inset-0 bg-[#4a5844]/80 mix-blend-multiply"></div>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 h-full flex-grow">
+            <div>
+                <h1 class="text-7xl lg:text-[9rem] leading-[0.85] font-medium tracking-tighter">
+                    Jute,<br />Reinvented.
+                </h1>
+            </div>
+            <div class="flex flex-col justify-start lg:pt-32 items-start lg:items-end text-left lg:text-right">
+                <h2 class="text-3xl lg:text-5xl font-medium tracking-tight mb-6">
+                    For Your Daily Life.<br />For the Planet.
+                </h2>
+                <p class="max-w-xs text-[10px] lg:text-xs opacity-80 uppercase tracking-widest leading-relaxed mb-8">
+                    NATURE-WOVEN TECHNOLOGY THAT DELIVERS DURABILITY WITH ZERO WASTE AND ZERO EMISSIONS.
+                </p>
+                <button
+                    class="border border-[#f0eee4]/30 rounded-full px-6 py-3 text-[10px] tracking-widest uppercase hover:bg-[#f0eee4] hover:text-[#4a5844] transition-colors">
+                    + EXPLORE PRODUCTS -
+                </button>
+            </div>
+        </div>
+
+        <div class="relative z-10 flex flex-wrap justify-between items-end pb-6 opacity-60 gap-4">
+            <div class="flex gap-8 text-[10px] font-medium tracking-widest uppercase">
+                <span class="flex items-center gap-2">
+                    <div class="w-4 h-4 rounded-full border border-current flex items-center justify-center">1</div>
+                    100% ORGANIC
+                </span>
+                <span class="flex items-center gap-2">
+                    <div class="w-4 h-4 rounded-full border border-current flex items-center justify-center">2</div>
+                    SUSTAINABLE
+                </span>
+                <span class="flex items-center gap-2">
+                    <div class="w-4 h-4 rounded-full border border-current flex items-center justify-center">3</div>
+                    BIODEGRADABLE
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Split Section 1 -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 bg-[#f0eee4] text-[#3b4a3f]">
+        <div class="relative h-[60vh] lg:h-auto overflow-hidden">
+            <img src="images/polythene.jpeg" alt="Processing"
+                class="absolute inset-0 w-full h-full object-cover grayscale mix-blend-multiply opacity-80" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-8 lg:p-16 text-[#f0eee4]">
+                <h3 class="text-4xl lg:text-5xl font-medium tracking-tight mb-6 leading-tight max-w-md">Most plastic
+                    bags never make it to recycling</h3>
+                <p class="text-[10px] tracking-widest uppercase max-w-sm opacity-80 leading-relaxed">
+                    MOST OF WHAT YOU USE GETS LOCKED IN LANDFILLS OR WASHES AWAY — LEAVING YOU WITH TOXIC POLLUTION AND
+                    HIGHER ENVIRONMENTAL COSTS.
+                </p>
+            </div>
+        </div>
+        <div class="p-12 lg:p-24 flex flex-col justify-center border-l border-[#3b4a3f]/10">
+            <h3 class="text-4xl lg:text-6xl font-medium tracking-tight mb-8 text-[#7c8c6c] leading-[1.1]">
+                Up to 70% of plastic ends up in oceans or landfills.
+            </h3>
+            <p class="text-[10px] tracking-widest uppercase opacity-60">Source: EPA, 2023</p>
+
+            <div class="mt-24">
+                <div
+                    class="w-full h-64 border border-[#7c8c6c]/20 rounded-t-full flex items-end justify-center overflow-hidden relative">
+                    <img src="images/polythene.jpeg" alt="Jute Roll"
+                        class="w-full h-full object-cover mix-blend-multiply opacity-90" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet EcoJute -->
+    <section
+        class="bg-[#4a5844] text-[#f0eee4] p-12 lg:p-24 relative overflow-hidden min-h-screen flex flex-col justify-center group">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0 pointer-events-none flex items-center justify-center">
+            <img src="images/brown-bag-1.png" alt="EcoJute Bag"
+                class="w-full h-full object-cover mix-blend-luminosity opacity-50 drop-shadow-[0_20px_80px_rgba(0,0,0,0.5)] transition-transform duration-1000 group-hover:scale-105" />
+        </div>
+        <!-- Background Decorative Text -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-[0.03] select-none pointer-events-none">
+            <h2 class="text-[20vw] font-bold tracking-tighter uppercase whitespace-nowrap">ECOJUTE</h2>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto w-full">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
+
+                <!-- Left Features -->
+                <div class="flex-1 space-y-12 lg:space-y-24 order-2 lg:order-1">
+                    <div class="max-w-xs group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span
+                                class="w-8 h-px bg-[#f0eee4]/30 group-hover:w-12 group-hover:bg-[#f0eee4] transition-all"></span>
+                            <h4 class="text-xl lg:text-2xl font-medium tracking-tight">Just drop it</h4>
+                        </div>
+                        <p class="text-[10px] tracking-widest uppercase opacity-60 leading-relaxed">
+                            NO NEW EQUIPMENT NEEDED. JUST DROP IT INTO YOUR DAILY ROUTINE — IT INTEGRATES SEAMLESSLY ON
+                            ITS OWN.
+                        </p>
+                    </div>
+
+                    <div class="max-w-xs group">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span
+                                class="w-8 h-px bg-[#f0eee4]/30 group-hover:w-12 group-hover:bg-[#f0eee4] transition-all"></span>
+                            <h4 class="text-xl lg:text-2xl font-medium tracking-tight">Reinventing delivery</h4>
+                        </div>
+                        <p class="text-[10px] tracking-widest uppercase opacity-60 leading-relaxed">
+                            1,000 BAGS FIT IN A COURIER BOX. SHIPS WITH FEDEX, DHL, EVEN AMAZON. THOUSANDS OF USES,
+                            DELIVERED OVERNIGHT.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Center Product -->
+                <div class="relative w-full max-w-sm lg:max-w-md order-1 lg:order-2 flex flex-col items-center">
+                    <div class="mb-12 lg:hidden text-center">
+                        <h2 class="text-5xl font-medium tracking-tight">Meet EcoJute™</h2>
+                        <p class="text-[10px] tracking-[0.2em] uppercase opacity-40 mt-4">The core of our ecosystem</p>
+                    </div>
+                </div>
+
+                <!-- Right Features -->
+                <div class="flex-1 space-y-12 lg:space-y-24 order-3 lg:text-right flex flex-col lg:items-end">
+                    <!-- Desktop-only Top Title -->
+                    <div class="hidden lg:block mb-8 text-right">
+                        <h2 class="text-6xl font-medium tracking-tight">Meet EcoJute™</h2>
+                        <p class="text-[10px] tracking-[0.2em] uppercase opacity-40 mt-4">The core of our ecosystem</p>
+                    </div>
+
+                    <div class="max-w-xs group">
+                        <div class="flex items-center lg:justify-end gap-4 mb-4">
+                            <h4 class="text-xl lg:text-2xl font-medium tracking-tight">0 run-off</h4>
+                            <span
+                                class="w-8 h-px bg-[#f0eee4]/30 group-hover:w-12 group-hover:bg-[#f0eee4] transition-all order-first lg:order-last"></span>
+                        </div>
+                        <p class="text-[10px] tracking-widest uppercase opacity-60 leading-relaxed">
+                            EVENTS RECORDED IN 12 MONTHS OF MONITORING. TOXIC WASTE ELIMINATED.
+                        </p>
+                    </div>
+
+                    <div class="max-w-xs group">
+                        <div class="flex items-center lg:justify-end gap-4 mb-4">
+                            <h4 class="text-xl lg:text-2xl font-medium tracking-tight">Zero emissions</h4>
+                            <span
+                                class="w-8 h-px bg-[#f0eee4]/30 group-hover:w-12 group-hover:bg-[#f0eee4] transition-all order-first lg:order-last"></span>
+                        </div>
+                        <p class="text-[10px] tracking-widest uppercase opacity-60 leading-relaxed">
+                            WE SKIP ENERGY-INTENSIVE PROCESSES ENTIRELY, CUTTING CO2 AT THE SOURCE. CLEANER TO MAKE,
+                            BETTER FOR THE PLANET.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Split -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 bg-[#f0eee4] text-[#3b4a3f] border-t border-[#3b4a3f]/10">
+        <div class="h-[50vh] lg:h-auto border-b lg:border-b-0 lg:border-r border-[#3b4a3f]/10">
+            <img src="images/jute farmer.jpg" alt="Mockup"
+                class="w-full h-full object-cover mix-blend-multiply opacity-90" />
+        </div>
+        <div class="p-12 lg:p-24 flex flex-col justify-center">
+            <h2 class="text-4xl lg:text-6xl font-medium tracking-tight mb-16 leading-[1.1]">
+                Field-Tested.<br />Earth-Approved.
+            </h2>
+
+            <div class="space-y-0 border-t border-[#3b4a3f]/10">
+                <div class="flex items-center justify-between border-b border-[#3b4a3f]/10 py-6">
+                    <span class="text-4xl lg:text-5xl font-medium tracking-tighter">4</span>
+                    <span
+                        class="text-[9px] tracking-widest uppercase opacity-60 max-w-[140px] text-right leading-relaxed">CONTINENTS
+                        TESTED</span>
+                </div>
+                <div class="flex items-center justify-between border-b border-[#3b4a3f]/10 py-6">
+                    <span class="text-4xl lg:text-5xl font-medium tracking-tighter">100x</span>
+                    <span
+                        class="text-[9px] tracking-widest uppercase opacity-60 max-w-[140px] text-right leading-relaxed">LOWER
+                        TRANSPORT COST</span>
+                </div>
+                <div class="flex items-center justify-between border-b border-[#3b4a3f]/10 py-6">
+                    <span class="text-4xl lg:text-5xl font-medium tracking-tighter">0.e5 ton</span>
+                    <span
+                        class="text-[9px] tracking-widest uppercase opacity-60 max-w-[140px] text-right leading-relaxed">CO2
+                        SAVED PER ACRE - AT NO EXTRA COST</span>
+                </div>
+                <div class="flex items-center justify-between border-b border-[#3b4a3f]/10 py-6">
+                    <span class="text-4xl lg:text-5xl font-medium tracking-tighter">≥5x</span>
+                    <span
+                        class="text-[9px] tracking-widest uppercase opacity-60 max-w-[140px] text-right leading-relaxed">RETURN*
+                        ON EVERY DOLLAR INVESTED</span>
+                </div>
+            </div>
+            <p class="text-[8px] tracking-widest uppercase opacity-40 mt-8 leading-relaxed">
+                *EQUAL TO OR BETTER THAN THE ROI PUBLISHED FOR LEADING PLASTIC PROGRAMS, BASED ON SIDE-BY-SIDE TRIAL
+                ECONOMICS AND LOWER FREIGHT + ZERO-EMISSION PRACTICES.
+            </p>
+        </div>
+    </section>
+
+    <!-- Cleaner for the planet -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 bg-[#f0eee4] text-[#3b4a3f] border-t border-[#3b4a3f]/10">
+        <div
+            class="p-12 lg:p-24 flex flex-col justify-between order-2 lg:order-1 border-t lg:border-t-0 lg:border-r border-[#3b4a3f]/10">
+            <h2 class="text-4xl lg:text-6xl font-medium tracking-tight mb-16 leading-[1.1]">
+                Cleaner for the Planet —<br />Without the Carbon Cost
+            </h2>
+            <div>
+                <p class="text-[10px] tracking-widest uppercase opacity-70 leading-relaxed max-w-md mb-8">
+                    MOST BAG COMPANIES PAY TO OFFSET THEIR EMISSIONS. WITH ECOJUTE, OUR BAGS ARE MADE CLEAN FROM THE
+                    START — SO YOU CAN LOWER YOUR FOOTPRINT WITHOUT BUYING CREDITS OR PAYING COMPLIANCE FEES.
+                </p>
+                <button
+                    class="border border-[#3b4a3f]/30 rounded-full px-6 py-3 text-[10px] tracking-widest uppercase hover:bg-[#3b4a3f] hover:text-[#f0eee4] transition-colors">
+                    + LEARN MORE -
+                </button>
+            </div>
+        </div>
+        <div class="h-[50vh] lg:h-auto order-1 lg:order-2">
+            <img src="images/closeup-texture.png" alt="Organic Bags"
+                class="w-full h-full object-cover mix-blend-multiply opacity-90" />
+        </div>
+    </section>
+
+    <!-- Footer / Products -->
+    <section class="bg-[#7c8c6c] text-[#f0eee4] p-12 lg:p-24 border-t border-[#f0eee4]/10">
+        <h2 class="text-4xl lg:text-6xl font-medium tracking-tight mb-16 leading-[1.1]">
+            For Better Shopping.<br />For Healthier Planet.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#f0eee4]/20 border border-[#f0eee4]/20">
+            <div class="group cursor-pointer bg-[#7c8c6c] hover:bg-[#8a9a7a] transition-colors flex flex-col">
+                <div class="bg-[#f0eee4] aspect-square relative overflow-hidden flex items-center justify-center">
+                    <img src="images/bag-1.png" alt="EcoJute™ Classic"
+                        class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    <div
+                        class="absolute top-4 right-4 w-8 h-8 rounded-full border border-[#3b4a3f]/20 flex items-center justify-center text-[#3b4a3f] bg-white/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-medium tracking-tight mb-4">EcoJute™ Classic</h4>
+                    <p class="text-[9px] tracking-widest uppercase opacity-70 leading-relaxed">HIGH-PERFORMANCE EVERYDAY
+                        TOTE. THE GOAL — A SINGLE BAG PLATFORM EVERYONE CAN TRUST.</p>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer bg-[#7c8c6c] hover:bg-[#8a9a7a] transition-colors flex flex-col">
+                <div class="bg-[#f0eee4] aspect-square relative overflow-hidden flex items-center justify-center">
+                    <img src="images/bag-2.png" alt="EcoJute™ Base"
+                        class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    <div
+                        class="absolute top-4 right-4 w-8 h-8 rounded-full border border-[#3b4a3f]/20 flex items-center justify-center text-[#3b4a3f] bg-white/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-medium tracking-tight mb-4">EcoJute™ Base</h4>
+                    <p class="text-[9px] tracking-widest uppercase opacity-70 leading-relaxed">MINIMALIST DESIGN. THE
+                        HIDDEN ENERGY THAT BOOSTS UTILITY, INCREASES EFFICIENCY, AND CUTS WASTE.</p>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer bg-[#7c8c6c] hover:bg-[#8a9a7a] transition-colors flex flex-col">
+                <div class="bg-[#f0eee4] aspect-square relative overflow-hidden flex items-center justify-center">
+                    <img src="images/bag-3.png" alt="EcoJute™ Premium"
+                        class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-700 ease-out" />
+                    <div
+                        class="absolute top-4 right-4 w-8 h-8 rounded-full border border-[#3b4a3f]/20 flex items-center justify-center text-[#3b4a3f] bg-white/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-8 flex-grow">
+                    <h4 class="text-2xl font-medium tracking-tight mb-4">EcoJute™ Premium</h4>
+                    <p class="text-[9px] tracking-widest uppercase opacity-70 leading-relaxed">100% ORGANIC CERTIFIED.
+                        DELIVERS MAXIMUM DURABILITY WITHOUT COMPROMISE.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Very bottom footer -->
+    <footer
+        class="bg-[#4a5844] text-[#f0eee4] p-6 lg:p-12 border-t border-[#f0eee4]/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] tracking-widest uppercase opacity-60">
+        <div>© 2026 ECOJUTE INC. ALL RIGHTS RESERVED.</div>
+        <div class="flex gap-6">
+            <span class="cursor-pointer hover:opacity-100">PRIVACY POLICY</span>
+            <span class="cursor-pointer hover:opacity-100">TERMS OF SERVICE</span>
+        </div>
+    </footer>
+</body>
+
+</html>
